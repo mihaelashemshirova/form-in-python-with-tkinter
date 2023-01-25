@@ -7,7 +7,10 @@ window.config(bg='pink')
 
 def send():
     name = name_input.get()
-    hi_name = tk.Label(text=f'Hello, {name}!', bg='white')
+    if len(name) > 1:
+        hi_name = tk.Label(text=f'Hello, {name}! You have nice name :)', bg='white')
+    else:
+        hi_name = tk.Label(text=f'Your name have one letter. I am not sure you entered a correct name. :)', bg='white')
     return hi_name.pack()
 
 
